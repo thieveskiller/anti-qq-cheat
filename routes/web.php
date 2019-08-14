@@ -18,4 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/list', 'WebListController@index')->name('web_list');
+Route::get('/list', 'WebController@index')->name('web_list');
+Route::get('/commit', 'WebController@commit')->name('commit_web')->middleware('auth');
+Route::post('/commit', 'WebController@add')->name('commit_web')->middleware('recaptcha');
