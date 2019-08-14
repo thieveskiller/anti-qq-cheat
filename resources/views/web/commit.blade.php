@@ -27,7 +27,7 @@
                             <div class="form-group row">
                                 <label for="url" class="col-md-4 col-form-label text-md-right">URL</label>
                                 <div class="col-md-6">
-                                    <input id="url" type="text" class="form-control @error('url') is-invalid @enderror" name="url" required autofocus>
+                                    <input id="url" type="text" class="form-control @error('url') is-invalid @enderror" name="url" value="{{ old('url') }}" required autofocus>
                                     @error('url')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -38,6 +38,9 @@
                             <div class="form-group row">
                                 <div class="col-md-6 offset-md-4">
                                     <div id="recaptcha"></div>
+                                    @error('recaptcha')
+                                       <strong>{{ $message }}</strong>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group row mb-0">

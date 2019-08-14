@@ -56,6 +56,9 @@
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div id="recaptcha"></div>
+                                @error('recaptcha')
+                                <strong>{{ $message }}</strong>
+                                @enderror
                             </div>
                         </div>
 
