@@ -25,7 +25,7 @@ windows下可以命名为.env.之后windows会自动处理为.env
 继续运行
 
 ```
-php artisan migration
+php artisan migrate
 php artisan key:generate
 ```
 
