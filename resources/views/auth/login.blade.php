@@ -1,5 +1,19 @@
 @extends('layouts.app')
-
+@section('js')
+    <script>
+        var recaptcha;
+        var RecaptchaOnloadCallback = function() {
+            recaptcha = grecaptcha.render('recaptcha', {
+                'sitekey' : '{{ env('RECAPTCHA_SITE_KEY') }}',
+                'theme' : 'light',
+                'callback' : function () {
+                    $('#submit').removeAttr('disabled');
+                }
+            });
+        };
+    </script>
+    <script src="https://www.recaptcha.net/recaptcha/api.js?onload=RecaptchaOnloadCallback" async defer></script>
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -41,6 +55,12 @@
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
+                                <div id="recaptcha"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -53,7 +73,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button id="submit" type="submit" class="btn btn-primary" disabled>
                                     {{ __('Login') }}
                                 </button>
 

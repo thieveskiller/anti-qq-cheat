@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Request;
 
 class LoginController extends Controller
 {
@@ -34,6 +35,9 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        if(Request::method()=='POST'){
+            $this->middleware('recaptcha')->except('logout');
+        }
         $this->middleware('guest')->except('logout');
     }
 }
