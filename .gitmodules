@@ -1,0 +1,3 @@
+[submodule "storage/webs"]
+	path = storage/webs
+	url = https://github.com/hs-err/qq-cheats-list.git
