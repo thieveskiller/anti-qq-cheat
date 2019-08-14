@@ -4,6 +4,6 @@
 
 所有的信息在 https://github.com/thieveskiller/qq-cheats-list 内！
 
-本项目的自动构建地址为 https://nhml.hserr.xyz/ 【暂定】。
+本项目的自动构建地址为 http://thieveskiller.org/ 【暂定】。
 
 如果你需要webhook请在上述网站提交！
