@@ -1,0 +1,19 @@
+<?php
+return [
+    'commit'=>[
+        'tittle'=>'提交网站',
+        'url'=>'URL',
+        'commit'=>'提交',
+    ],
+    'list'=>[
+        'tittle'=>'网站列表',
+        'id'=>'ID',
+        'url'=>'URL',
+        'last_check'=>'最后检查',
+        'status'=>[
+            'tittle'=>'状态',
+            'true'=>'正常',
+            'false'=>'异常',
+        ]
+    ]
+];

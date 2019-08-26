@@ -19,13 +19,13 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">提交盗号网站</div>
+                    <div class="card-header">@lang('web.commit.tittle')</div>
 
                     <div class="card-body">
                         <form method="post">
                             @csrf
                             <div class="form-group row">
-                                <label for="url" class="col-md-4 col-form-label text-md-right">URL</label>
+                                <label for="url" class="col-md-4 col-form-label text-md-right">@lang('web.commit.url')</label>
                                 <div class="col-md-6">
                                     <input id="url" type="text" class="form-control @error('url') is-invalid @enderror" name="url" value="{{ old('url') }}" required autofocus>
                                     @error('url')
@@ -46,7 +46,7 @@
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
                                     <button id="submit" type="submit" class="btn btn-primary" disabled>
-                                        提交
+                                        @lang('web.commit.commit')
                                     </button>
                                 </div>
                             </div>

@@ -5,16 +5,16 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">盗号网站列表</div>
+                    <div class="card-header">@lang('web.list.tittle')</div>
 
                     <div class="card-body">
                         <table>
                             <thead>
                                 <tr>
-                                    <td>id</td>
-                                    <td>地址</td>
-                                    <td>最后检查</td>
-                                    <td>状态</td>
+                                    <td>@lang('web.list.id')</td>
+                                    <td>@lang('web.list.url')</td>
+                                    <td>@lang('web.list.last_check')</td>
+                                    <td>@lang('web.list.status.tittle')</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -23,7 +23,7 @@
                                         <td>{{ $web['id'] }}</td>
                                         <td><a href="{{ $web['url'] }}">{{ $web['url'] }}</a></td>
                                         <td>{{ $web['last_check'] }}</td>
-                                        <td>{{ $web['check_status']?'成功':'失败' }}</td>
+                                        <td>{{ $web['check_status']?trans('web.list.status.true'):trans('web.list.status.false') }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

@@ -13,10 +13,10 @@ return [
     |
     */
 
-    'password' => 'Password too short',
-    'reset' => 'Password is reset.',
-    'sent' => 'We have sent you a email with a link to change the password.',
-    'token' => 'Can\'t check you token.',
-    'user' => 'No such username in our record.',
+    'password' => '密码必须要在8位以上',
+    'reset' => '你的密码已被重置。',
+    'sent' => '我们给你发了一封带有修改密码链接的email',
+    'token' => '无效的修改密码链接。',
+    'user' => '在我们的数据里找不到你的邮箱。',
 
 ];
